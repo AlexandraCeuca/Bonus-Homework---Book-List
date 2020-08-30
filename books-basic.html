@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Book List</title>
+    <link rel="stylesheet" type="text/css" href="book.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="sideBar">
+            <div class="headerBar">
+                <div>
+                    <img src="./Capture.JPG" alt=" Books photo">
+                </div>
+                <div>
+                    <header>Box of books</header>
+                </div>
+            </div>
+            <nav class="navigationBar">
+                <header class="headerNavigationBar">Your Library</header>
+                <div class="ItemsContainer">
+                    <div>Home</div>
+                    <div>Download Reader</div>
+                    <div>Help</div>
+                </div>
+
+                <header class="headerNavigationBar">Book Shop</header>
+                <div class="ItemsContainer">
+                    <div>Invite Partener</div>
+                    <div>Book Lists</div>
+                    <div>Book Purchases</div>
+                </div>
+                
+                <header class="headerNavigationBar">Your Profile</header>
+                <div class="ItemsContainer">
+                    <div>Personal Profile</div>
+                    <div>Sign Out</div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mainContainer">
+                <div class="mainContainerHeader">
+                    <div>Book Boxen</div>
+                </div>
+
+                <div class="mainContainerBody">
+                    <div class="booksListContainer">
+                        <div id="myBooks">
+                            <h1>My Book List</h1>
+                        </div>
+                        <div id="myBooksContainer"></div>
+                    </div>
+
+                    <div id="newBook">
+                        <h1>Add new Book</h1>
+                        <form>
+                            <div>
+                                <label for="title">Title</label>
+                                <input required type="text" name="title" id="title" placeholder="Add title">
+                            </div>
+                            <div>
+                                <label for="author">Author</label>
+                                <input required type="text" name="author" id="author" placeholder="Add author">
+                            </div>
+                            <div>
+                                <button id="addNewBook" type="button">Add book</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div>
+                        <header>Links</header>
+                        <ul>
+                            <li>About Us</li>
+                            <li>A Useful Link</li>
+                            <li>Students</li>
+                            <li>Parents</li>
+                            <li>Schools</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <header>2020 Box of Books</header>
+                        <ul>
+                            <li>Privacy Policy</li>
+                            <li>Disclaimer</li>
+                            <li>Help</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+    <script src="books-basic.js"></script>
+
+</body>
+
+</html>
