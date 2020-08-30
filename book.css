@@ -1,0 +1,132 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    height: 100vh;
+}
+.flex-container {
+    display: flex;
+    height: 100%;
+}
+.sideBar {
+    background-color: rgb(52 73 94);
+    flex: 1;
+    min-width: 300px;
+    height: 100%;
+}
+.mainContainer {
+    flex: 3.5;
+    min-width: 800px;
+    height: 100%;
+}
+.headerBar {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(71 187 126);
+    height: 50px;
+    align-items: center;
+}
+.headerBar img {
+    height: 40px;
+    margin-left: 50px;
+}
+.headerBar header {
+    color: white;
+    font-size: 20px;
+}
+.headerNavigationBar{
+    position: relative;
+    display: block;
+    font-size: 17px;
+    color:white;
+    font-weight: bold;
+    padding: 25px 50px 10px 30px;
+    border-bottom: 1px solid white;
+}
+.ItemsContainer {
+    color:white;
+    padding: 15px 50px 10px 30px;
+}
+.ItemsContainer div {
+    margin-bottom: 15px;
+}
+.mainContainerHeader {
+    height: 50px;
+    border-bottom: 1px solid rgb(51 73 97);
+}
+.mainContainerHeader div{
+    color: rgb(51 73 97);
+    font-size: 30px;
+    font-weight: bold;
+    margin-left:40px;
+    padding-top: 5px;
+}
+.footer {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(236 240 241);
+    border-top: 1px solid darkgray;
+    margin-top:280px;
+}
+.footer div{
+    padding: 20px 0px;
+    align-items:center;
+}
+.footer header:first-child{
+    color: rgb(51 73 97);
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+}
+.mainContainerBody {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px 40px;
+}
+li {
+    list-style: none;
+    margin-bottom: 6px;
+}
+
+form div {
+    padding: 10px 0;
+}
+
+#errors p {
+    margin: 5px 0;
+    color: red;
+}
+.booksListContainer {
+    display: flex;
+    flex-direction: column;
+}
+#myBooksContainer {
+    max-height: 50px;
+}
+#myBooks {
+    margin-bottom: 20px;
+    border-bottom:1px solid black;
+}
+#newBook h1{
+    margin-bottom: 20px;
+    border-bottom:1px solid black;
+}
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 70px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+input {
+  display: inline-block;
+  float: left;
+}
+button {
+    margin-top:30px;
+}
