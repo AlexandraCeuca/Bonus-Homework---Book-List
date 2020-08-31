@@ -59,11 +59,17 @@
                         <form>
                             <div>
                                 <label for="title">Title</label>
-                                <input required type="text" name="title" id="title" placeholder="Add title">
+                                <div class="errorContainer">
+                                    <input required type="text" name="title" id="title" placeholder="Add title">
+                                    <div id="invalidTextTile" class="invalidText" >fjksjfs</div>
+                                </div>
                             </div>
                             <div>
                                 <label for="author">Author</label>
-                                <input required type="text" name="author" id="author" placeholder="Add author">
+                                <div class="errorContainer">
+                                    <input required type="text" name="author" id="author" placeholder="Add author">
+                                    <div id="invalidTextAuthor" class="invalidText">fjksjfs</div>
+                                </div>
                             </div>
                             <div>
                                 <button id="addNewBook" type="button">Add book</button>
