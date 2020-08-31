@@ -122,4 +122,7 @@ function displayBook(currentBook) {
 
     // append the list item to the bookList (global variable)
     bookList.appendChild(listItem);
+
+    // reset the form after adding an item
+    document.getElementById("myForm").reset();
 }
