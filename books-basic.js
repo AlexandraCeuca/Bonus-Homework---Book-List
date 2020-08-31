@@ -72,6 +72,8 @@ button.addEventListener('click', function () {
 }
 });
 
+// remove the errors, after the input has value (hint: use "keypress" event listener on inputs)
+
 bookTitle.addEventListener("input", function() { validateInput("title", "invalidTextTile");});
 bookAuthor.addEventListener("input", function() { validateInput("author", "invalidTextAuthor");});
 
