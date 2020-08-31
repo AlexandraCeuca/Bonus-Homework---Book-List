@@ -60,6 +60,15 @@ button.addEventListener('click', function () {
     } else {
         console.log (bookAuthor.value + "is valid");
 
+    // validate duplicate items, if the book already exist in the list display an error
+    }
+    for (i=0; i<books.length; i++) {
+        if(books[i].title===bookTitle.value && books[i].author===bookAuthor.value) {
+            formValid=false;
+            let errorDuplicate = document.getElementById("errorDuplicate");
+            errorDuplicate.style.visibility= "visible";
+            errorDuplicate.innerHTML = "This book was already added on the list!"
+        }
     }
     if(formValid) { 
     var newBook = {
