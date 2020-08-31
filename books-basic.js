@@ -15,6 +15,9 @@ var books = [{
         alreadyRead: true
     }
 ];
+   // get the values from the title and author inputs
+   var bookTitle = document.getElementsByName('title')[0];
+   var bookAuthor = document.getElementsByName('author')[0];
 
 // get the element with 'myBooks' id
 var myBooks = document.getElementById('myBooksContainer');
@@ -36,21 +39,55 @@ var button = document.getElementById('addNewBook');
 // add a click event listener to this button
 button.addEventListener('click', function () {
 
-    // get the values from the title and author inputs
-    var bookTitle = document.getElementsByName('title')[0].value;
-    var bookAuthor = document.getElementsByName('author')[0].value;
-
     // create an new book object with the values that we get from the inputs
+    // validate that the title and author fields have values before adding a new book
+    // display errors, which indicates which field is not completed
+    let formValid = true;
+    if(!bookTitle.value) {
+        formValid=false;
+        bookTitle.classList.add("invalidInput");
+        let invalidText = document.getElementById("invalidTextTile");
+        invalidText.style.visibility ="visible";
+        invalidText.innerHTML = "Title of the book is invalid. Please write a title!"
+    } else {
+        console.log (bookTitle.value + "is valid");
+    } if (!bookAuthor.value) {
+        formValid=false;
+        bookAuthor.classList.add("invalidInput");
+        let invalidText = document.getElementById("invalidTextAuthor");
+        invalidText.style.visibility ="visible";
+        invalidText.innerHTML = "Please mention the author of the book";
+    } else {
+        console.log (bookAuthor.value + "is valid");
+
+    }
+    if(formValid) { 
     var newBook = {
-        title: bookTitle,
-        author: bookAuthor,
+        title: bookTitle.value,
+        author: bookAuthor.value,
         alreadyRead: false
     };
-
     // call the displayBook() function with the newBook object as argument
     displayBook(newBook);
-
+}
 });
+
+bookTitle.addEventListener("input", function() { validateInput("title", "invalidTextTile");});
+bookAuthor.addEventListener("input", function() { validateInput("author", "invalidTextAuthor");});
+
+
+function validateInput(inputId, errorTextID) {
+    const element = document.getElementById(inputId);
+    const errorText = document.getElementById(errorTextID);
+    if (element.value) {
+        element.classList.remove("invalidInput");
+        errorText.style.visibility = "hidden";
+    } else {
+        element.classList.add("invalidInput");
+        errorText.style.visibility = "visible";
+    }
+}
+
 
 function displayBook(currentBook) {
     // create a list item element
