@@ -129,6 +129,7 @@ input {
 }
 button {
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 .invalidInput {
     border: 1px solid red !important;
@@ -146,4 +147,10 @@ button {
 .errorContainer {
     display:flex;
     flex-direction: column;
+}
+#errorDuplicate {
+    color: red;
+    visibility: hidden;
+    font-size:20px;
+    font-weight: bold;
 }
