@@ -19,6 +19,7 @@ body {
     flex: 3.5;
     min-width: 800px;
     height: 100%;
+    position: relative;
 }
 .headerBar {
     display: flex;
@@ -68,7 +69,10 @@ body {
     justify-content: space-evenly;
     background-color: rgb(236 240 241);
     border-top: 1px solid darkgray;
-    margin-top:280px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
 }
 .footer div{
     padding: 20px 0px;
@@ -91,11 +95,6 @@ li {
     list-style: none;
     margin-bottom: 6px;
 }
-
-form div {
-    padding: 10px 0;
-}
-
 #errors p {
     margin: 5px 0;
     color: red;
@@ -105,7 +104,8 @@ form div {
     flex-direction: column;
 }
 #myBooksContainer {
-    max-height: 50px;
+    overflow: auto;
+    max-height: 200px;
 }
 #myBooks {
     margin-bottom: 20px;
@@ -121,12 +121,29 @@ label{
     clear: left;
     width: 70px;
     text-align: left;
-    margin-bottom: 10px;
 }
 input {
   display: inline-block;
   float: left;
+  margin-bottom: 4px;
 }
 button {
-    margin-top:30px;
+    margin-top: 20px;
+}
+.invalidInput {
+    border: 1px solid red !important;
+}
+.invalidInput:focus {
+    outline-color: red;
+}
+.invalidText {
+    visibility: hidden;
+    clear: left;
+    color:red;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.errorContainer {
+    display:flex;
+    flex-direction: column;
 }
